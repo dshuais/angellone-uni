@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "uview-ui": "^2.0.29",
+    "vue-tinder": "^2.0.3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "componentGenerics": {
+    "scoped-slots-default": true,
+    "scoped-slots-nope": true,
+    "scoped-slots-like": true,
+    "scoped-slots-super": true,
+    "scoped-slots-down": true
+  },
+  "component": true,
+  "usingComponents": {
+    "tinder-card": "/components/tinder/vue-tinder/TinderCard"
+  }
+}

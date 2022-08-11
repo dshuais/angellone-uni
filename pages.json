@@ -1,0 +1,162 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		// {
+		// 	"path": "pages/login/index",
+		// 	"style": {
+				// "enablePullDownRefresh": false,
+		 		// "navigationStyle":"custom", // 去除app H5 小程序的默认顶部
+				// "titleNView": false // 去除app H5的默认顶部
+		// 	}
+		// },
+		{
+		    "path" : "pages/guide/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "引导页",
+		        "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+		    }
+		    
+		},
+		{
+			"path": "pages/noneNetwork/index",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "断网啦..."
+			}
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/square/index",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "精选推荐",
+				"navigationStyle": "custom",
+				"navigationBarRightButton": { "hide": true }
+			}
+		},
+		{
+			"path": "pages/home/index",
+			"style": {
+				"enablePullDownRefresh": false,
+				"navigationBarTitleText": "个人中心",
+				"navigationStyle": "custom"
+			}
+		}
+    ],
+	/*
+		分包的方式 需要分包的文件在pages内的subcontract文件夹下创建
+	*/
+	/* 分包预加载 */
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": ["pages/subIndex/"]
+		},
+		"pages/square/index": {
+			"network": "all",
+			"packages": ["pages/subSquare/"]
+		},
+		"pages/home/index": {
+			"network": "all",
+			"packages": ["pages/subUser/"]
+		}
+	},
+	/* 分包 */
+	"subPackages": [
+		{
+		"root": "pages/subIndex/",
+		"pages": [
+			{
+				"path": "home/index",
+				"style": {
+					"enablePullDownRefresh": false,
+					"navigationBarTitleText": "个人中心"
+				}
+			}
+		]},
+		{
+		"root": "pages/subSquare/",
+		"pages": [
+			{
+			"path": "imgs/index",
+			"style": {
+				"navigationBarTitleText": "素材池",
+				"enablePullDownRefresh": false
+				// "navigationStyle": "custom"
+				}
+			},
+			{
+			    "path" : "files/index",
+			    "style": {
+			        "navigationBarTitleText": "文件池",
+			        "enablePullDownRefresh": false
+			    }
+			}
+		]},
+		{
+		"root": "pages/subUser/",
+		"pages": [
+			{
+				"path": "login/index",
+				"style": {
+					"enablePullDownRefresh": false,
+					"navigationBarTitleText": "登陆",
+					"navigationStyle": "custom"
+				}
+			},
+			{
+			"path": "user/index",
+			"style": {
+				"navigationBarTitleText": "user",
+				"enablePullDownRefresh": false
+				// "navigationStyle": "custom"
+				}
+			}
+		]}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black", // 导航栏字体颜色
+		"navigationBarTitleText": "Angell One", // 默认导航栏
+		"navigationBarBackgroundColor": "#fff", // #36CC85 导航栏颜色
+		// "backgroundColor": "#74B4FF"
+		"app-plus": {
+			"animationType": "pop-in"
+		}
+	},
+	"tabBar": {
+		"color": "#bfbfbf",
+		"selectedColor": "#2c2c2c",
+		"borderStyle": "white", // tab上边框颜色
+		"backgroundColor": "#ffffff",
+		"list": [{
+				"pagePath": "pages/index/index",
+				"iconPath": "static/image/index.png",
+				"text": "首页",
+				"selectedIconPath": "static/image/index2.png"
+			},
+			{
+				"pagePath": "pages/square/index",
+				"iconPath": "static/image/square.png",
+				"text": "精选",
+				"selectedIconPath": "static/image/square2.png"
+			},
+			{
+				"pagePath": "pages/home/index",
+				"iconPath": "static/image/home.png",
+				"text": "我的",
+				"selectedIconPath": "static/image/home2.png"
+			}
+		]
+	}
+}
