@@ -29,8 +29,8 @@
 				get() {
 					return this.isShare
 				},
-				set(fiag) {
-					this.$emit('update:isShare', fiag)
+				set(flag) {
+					this.$emit('update:isShare', flag)
 				}
 			}
 		},
