@@ -25,6 +25,18 @@
 				<text v-if="status == 1"> 上拉加载更多~ </text>
 			 </view>
 		</scroll-view> -->
+		
+		<!-- triggered: false, // 页面触发下拉事件
+		status: 1, // 加载的状态 1上拉加载 2正在加载 3没有了 -->
+		
+		<!-- 加载数据 上滑加载传个flag
+		if(!flag) {
+			this.list = rows
+			this.status = this.list.length >= total ? 3 : 1
+		} else {
+			this.list = this.list.concat(rows)
+			this.status = this.list.length >= total ? 3 : 1
+		} -->
 	</view>
 </template>
 
