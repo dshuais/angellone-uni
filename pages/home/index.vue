@@ -1,9 +1,9 @@
 <template>
 	<view class="container">
 		<view class="user flex-f" :style="'height:'+((navHeight-0)*2+200)+'rpx;padding:'+(navHeight*2)+'rpx 32rpx 0;'">
-			<u--image :showMenuByLongpress='false' @click="handelClickUserInfo" :src="userInfo.avatar || 'http://ds.dshuais.com/7b14c71afe0004078e4e09100.gif'" width='120' height='120' shape='circle'></u--image>
+			<u--image :showMenuByLongpress='false' @click="handelClickUserInfo" :src="userInfo.avatar || `http://ds.dshuais.com/img/default-avatar (${1}).png`" width='120' height='120' shape='circle'></u--image>
 			<view class="ml20">
-				<p class='fons-18'><span>{{ userInfo.nikeName || 'ANGELL ONE' }}</span>
+				<p class='fons-18'><span>{{ userInfo.nikeName || 'ANGELL ONE' + (Date.now() + '').slice(-4) }}</span>
 				<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`@/static/image/${
 					userInfo.gender == 0 ? 'ysnan' : userInfo.gender == 1 ? 'ysnv' : 'ysnone'}.png`)" width="55rpx" height="55rpx" shape='circle'></u--image>
 					</p>
@@ -81,6 +81,8 @@
 		data() {
 			return{
 				token: getToken(),
+				defaultNumber: void 0,
+				
 				isTouchDisable: false, // 是否禁止滑动
 				userInfo: {
 					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
@@ -138,6 +140,8 @@
 			}
 		},
 		onShow() {
+			this.defaultNumber = Math.ceil(Math.random() * 24)
+			console.log('随机头像', this.defaultNumber)
 			this.token = getToken()
 			getApp().getNetwork()
 		},
