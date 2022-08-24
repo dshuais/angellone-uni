@@ -12,7 +12,7 @@
 </template>
 
 <script>
-	import { getToken, remove, setToken, setStoreage } from '@/utils/cache'
+	import { getToken, remove, setToken, setStorage } from '@/utils/cache'
 	import { ANGELLONE_USERINFO } from '@/config/app'
 	import { getTokenStatus, getTodayGuide } from '@/api/api'
 	export default {
@@ -63,7 +63,7 @@
 				if(!getToken()) return remove(ANGELLONE_USERINFO)
 				const { data, token } = await getTokenStatus()
 				setToken(token)
-				setStoreage(ANGELLONE_USERINFO, data)
+				setStorage(ANGELLONE_USERINFO, data)
 			},
 			
 			async getTodaySelectGuide() {

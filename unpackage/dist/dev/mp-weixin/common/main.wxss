@@ -31,16 +31,25 @@
 /*   background: #fff; */
 /* } */
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .flex-a {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 .flex-f {
-  display: flex;
+	display: flex;
+}
+.flex-j {
+	display: flex;
+	justify-content: center;
 }
 .flex-c {
 	flex-direction: column;
@@ -297,6 +306,9 @@ video {
 	position: absolute;
 	visibility: hidden;
 }
+.posi-r {
+	position: relative;
+}
 .posi-a {
 	position: absolute;
 }
@@ -325,6 +337,10 @@ page {
   position: relative;
   /* overflow-y: auto;
  */
+}
+.main {
+	width: calc(100% - 64rpx);
+	margin: 0 32rpx;
 }
 .u-line-1 {
   display: -webkit-box !important;

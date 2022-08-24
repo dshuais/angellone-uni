@@ -1,7 +1,8 @@
 <template>
 	<view class="container">
 		<view class="user flex-f" :style="'height:'+((navHeight-0)*2+200)+'rpx;padding:'+(navHeight*2)+'rpx 32rpx 0;'">
-			<u--image :showMenuByLongpress='false' @click="handelClickUserInfo" :src="userInfo.avatar || `http://ds.dshuais.com/img/default-avatar (${1}).png`" width='120' height='120' shape='circle'></u--image>
+			<u--image :showMenuByLongpress='false' @click="handelClickUserInfo" width='120' height='120' shape='circle'
+			 :src="userInfo.avatar || `https://angellone.dshuais.com/img/avatar/default-avatar%20(${defaultNumber}).png`"></u--image>
 			<view class="ml20">
 				<p class='fons-18'><span>{{ userInfo.nikeName || 'ANGELL ONE' + (Date.now() + '').slice(-4) }}</span>
 				<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`@/static/image/${
@@ -81,7 +82,7 @@
 		data() {
 			return{
 				token: getToken(),
-				defaultNumber: void 0,
+				defaultNumber: void 0, // 默认头像的随机数
 				
 				isTouchDisable: false, // 是否禁止滑动
 				userInfo: {
@@ -140,8 +141,8 @@
 			}
 		},
 		onShow() {
-			this.defaultNumber = Math.ceil(Math.random() * 24)
-			console.log('随机头像', this.defaultNumber)
+			this.defaultNumber = Math.ceil(Math.random() * 24) // 随机头像编号
+
 			this.token = getToken()
 			getApp().getNetwork()
 		},

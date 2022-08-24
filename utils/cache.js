@@ -1,13 +1,13 @@
 const TOKENKEY = 'angellone-token'
 
-export const setStoreage = (key, value) => {
+export const setStorage = (key, value) => {
 	if(!uni.setStorageSync) return
 	if(key != null && value != null) {
 		uni.setStorageSync(key, value)
 	}
 }
 
-export const getStoreage = key => {
+export const getStorage = key => {
 	if(!uni.setStorageSync) return null
 	if(key != null) {
 		return uni.getStorageSync(key)
@@ -19,11 +19,11 @@ export const remove = key => {
 }
 
 export const setToken = token => {
-	setStoreage(TOKENKEY, token)
+	setStorage(TOKENKEY, token)
 }
 
 export const getToken = _ => {
-	return getStoreage(TOKENKEY)
+	return getStorage(TOKENKEY)
 }
 
 export const removeToken = _ => {

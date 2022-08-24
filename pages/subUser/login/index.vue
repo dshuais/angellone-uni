@@ -18,7 +18,7 @@
 
 <script>
 	import { wxlogin, getTodaySelected } from '@/api/api'
-	import { setStoreage, setToken } from '@/utils/cache'
+	import { setStorage, setToken } from '@/utils/cache'
 	import { ANGELLONE_USERINFO } from '@/config/app'
 	export default {
 		name: 'Login',
@@ -83,7 +83,7 @@
 				const { data, token,msg } = await wxlogin({encryptedData,iv,code})
 				if(!token) return this.$msg(msg)
 				setToken(token)
-				setStoreage(ANGELLONE_USERINFO, data)
+				setStorage(ANGELLONE_USERINFO, data)
 				this.$msg('登录成功',1)
 				setTimeout(() => {
 					uni.navigateBack()

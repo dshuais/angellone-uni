@@ -8,18 +8,29 @@
 // }
 
 .flex {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flex-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .flex-a {
-  display: flex;
-  align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .flex-f {
-  display: flex;
+	display: flex;
+}
+
+.flex-j {
+	display: flex;
+	justify-content: center;
 }
 
 .flex-c {
@@ -29,6 +40,8 @@
 .text-c {
 	text-align: center;
 }
+
+
 
 .mt5 {
   margin-top: 10rpx;
@@ -351,6 +364,10 @@ video {
 .not {
 	position: absolute;
 	visibility: hidden;
+}
+
+.posi-r {
+	position: relative;
 }
 
 .posi-a {

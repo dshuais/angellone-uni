@@ -74,7 +74,7 @@
 </template>
 
 <script>
-	import { getStoreage } from '@/utils/cache.js'
+	import { getStorage } from '@/utils/cache.js'
 	import { systemInfo } from '@/mixin/navigation'
 	import { getNewestSwiper, getStarMaxUser, } from '@/api/api'
 	export default {
@@ -99,7 +99,7 @@
 					{ id: 3, img: 'email2', title: '联系我们', text: '有什么建议和问题，请找到我们' },
 				],
 				isCall: false,
-				// starUserInfo: getStoreage('angellone-userinfo'),
+				// starUserInfo: getStorage('angellone-userinfo'),
 				starUserInfo: {},
 			}
 		},
