@@ -13,7 +13,7 @@
 
 <script>
 	import { getToken, remove, setToken, setStorage } from '@/utils/cache'
-	import { ANGELLONE_USERINFO } from '@/config/app'
+	import { ANGELLONE_USERINFO } from '@/config/config'
 	import { getTokenStatus, getTodayGuide } from '@/api/api'
 	export default {
 		data() {

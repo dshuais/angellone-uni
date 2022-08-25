@@ -19,7 +19,7 @@
 <script>
 	import { wxlogin, getTodaySelected } from '@/api/api'
 	import { setStorage, setToken } from '@/utils/cache'
-	import { ANGELLONE_USERINFO } from '@/config/app'
+	import { ANGELLONE_USERINFO } from '@/config/config'
 	export default {
 		name: 'Login',
 		data() {

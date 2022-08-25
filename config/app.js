@@ -1,3 +1,6 @@
+
+
+// 请求配置
 module.exports = {
 	// 请求域名 格式： https://您的域名
 	// #ifdef MP
@@ -19,7 +22,4 @@ module.exports = {
 	EXPIRE: 0,
 	//分页最多显示条数
 	LIMIT: 10,
-	
-	// 统一存储的用户信息
-	ANGELLONE_USERINFO: 'angellone-userinfo'
-};
+}

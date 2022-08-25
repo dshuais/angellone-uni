@@ -1,10 +1,6 @@
-import {
-	HTTP_REQUEST_URL,
-	HEADER,
-	TOKENNAME,
-	ANGELLONE_USERINFO
-} from '@/config/app';
-import { getToken, removeToken, remove } from '@/utils/cache.js'
+import { HTTP_REQUEST_URL, HEADER, TOKENNAME } from '@/config/app'
+import { ANGELLONE_USERINFO } from '@/config/config'
+import { getToken, removeToken, remove } from '@/utils/cache'
 
 /**
  * 发送请求
@@ -37,7 +33,7 @@ function baseRequest(url, method, data, opt) {
 			header: header,
 			data: data || {},
 			success: (res) => {
-				uni.hideLoading()
+				loading && uni.hideLoading()
 				// console.log('请求状态码', res.data)
 				const { msg, code } = res.data
 				if (msg == '非法访问' || code == 401) {
@@ -55,6 +51,9 @@ function baseRequest(url, method, data, opt) {
 						}
 					})
 				}
+				if(code != 200) {
+					reject(new Error(msg))
+				}
 				//  else if(code == 500) { // [400,500].includes(code)
 				// 	uni.showToast({
 				// 		title: msg,
@@ -69,15 +68,15 @@ function baseRequest(url, method, data, opt) {
 				reject('请求失败')
 			}
 		})
-	});
+	})
 }
 
-const request = {};
+const request = {}
 
 ['options', 'get', 'post', 'put', 'head', 'delete', 'trace', 'connect'].forEach((method) => {
 	request[method] = (api, data, opt) => baseRequest(api, method, data, opt || {})
-});
+})
 
 
 
-export default request;
+export default request
