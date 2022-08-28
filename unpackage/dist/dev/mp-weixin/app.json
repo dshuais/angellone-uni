@@ -1,89 +1,92 @@
 {
-    "pages": [
-        "pages/guide/index",
-        "pages/noneNetwork/index",
-        "pages/index/index",
-        "pages/square/index",
-        "pages/home/index"
-    ],
-    "subPackages": [
-        {
-            "root": "pages/subIndex/",
-            "pages": [
-                "home/index"
-            ]
-        },
-        {
-            "root": "pages/subSquare/",
-            "pages": [
-                "imgs/index",
-                "files/index"
-            ]
-        },
-        {
-            "root": "pages/subUser/",
-            "pages": [
-                "login/index",
-                "user/index"
-            ]
-        }
-    ],
-    "window": {
-        "navigationBarTextStyle": "black",
-        "navigationBarTitleText": "Angell One",
-        "navigationBarBackgroundColor": "#fff"
+  "pages": [
+    "pages/guide/index",
+    "pages/noneNetwork/index",
+    "pages/index/index",
+    "pages/square/index",
+    "pages/home/index"
+  ],
+  "subPackages": [
+    {
+      "root": "pages/subIndex/",
+      "pages": [
+        "home/index"
+      ]
     },
-    "tabBar": {
-        "color": "#bfbfbf",
-        "selectedColor": "#2c2c2c",
-        "borderStyle": "white",
-        "backgroundColor": "#ffffff",
-        "list": [
-            {
-                "pagePath": "pages/index/index",
-                "iconPath": "static/image/index.png",
-                "text": "首页",
-                "selectedIconPath": "static/image/index2.png"
-            },
-            {
-                "pagePath": "pages/square/index",
-                "iconPath": "static/image/square.png",
-                "text": "精选",
-                "selectedIconPath": "static/image/square2.png"
-            },
-            {
-                "pagePath": "pages/home/index",
-                "iconPath": "static/image/home.png",
-                "text": "我的",
-                "selectedIconPath": "static/image/home2.png"
-            }
-        ]
+    {
+      "root": "pages/subSquare/",
+      "pages": [
+        "imgs/index",
+        "files/index"
+      ]
     },
-    "preloadRule": {
-        "pages/index/index": {
-            "network": "all",
-            "packages": [
-                "pages/subIndex/"
-            ]
-        },
-        "pages/square/index": {
-            "network": "all",
-            "packages": [
-                "pages/subSquare/"
-            ]
-        },
-        "pages/home/index": {
-            "network": "all",
-            "packages": [
-                "pages/subUser/"
-            ]
-        }
+    {
+      "root": "pages/subUser/",
+      "pages": [
+        "login/index",
+        "user/index",
+        "system/index",
+        "opinion/index",
+        "costomer/index",
+        "about/index"
+      ]
+    }
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Angell One",
+    "navigationBarBackgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#bfbfbf",
+    "selectedColor": "#2c2c2c",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/image/index.png",
+        "text": "首页",
+        "selectedIconPath": "static/image/index2.png"
+      },
+      {
+        "pagePath": "pages/square/index",
+        "iconPath": "static/image/square.png",
+        "text": "精选",
+        "selectedIconPath": "static/image/square2.png"
+      },
+      {
+        "pagePath": "pages/home/index",
+        "iconPath": "static/image/home.png",
+        "text": "我的",
+        "selectedIconPath": "static/image/home2.png"
+      }
+    ]
+  },
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": [
+        "pages/subIndex/"
+      ]
     },
-    "permission": {
-        "scope.userLocation": {
-            "desc": "你的位置信息将用于小程序位置接口的效果展示"
-        }
+    "pages/square/index": {
+      "network": "all",
+      "packages": [
+        "pages/subSquare/"
+      ]
     },
-    "usingComponents": {},
-    "sitemapLocation": "sitemap.json"
+    "pages/home/index": {
+      "network": "all",
+      "packages": [
+        "pages/subUser/"
+      ]
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "usingComponents": {}
 }

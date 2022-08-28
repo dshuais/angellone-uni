@@ -27,6 +27,8 @@ export const wxlogin = data => request.post("user/wxlogin", data, {loading:true}
 
 export const getTokenStatus = data => request.get('user/status', data, {isModal:false}) // 查询token状态
 
+export const resetPwd = data => request.patch('user/changePwd', data) // 修改密码
+
 
 /**
  *  图片池相关

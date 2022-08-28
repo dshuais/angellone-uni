@@ -71,9 +71,9 @@ function baseRequest(url, method, data, opt) {
 	})
 }
 
-const request = {}
+const request = {};
 
-['options', 'get', 'post', 'put', 'head', 'delete', 'trace', 'connect'].forEach((method) => {
+['options', 'get', 'post', 'put', 'head', 'delete', 'trace', 'connect', 'patch'].forEach((method) => {
 	request[method] = (api, data, opt) => baseRequest(api, method, data, opt || {})
 })
 

@@ -59,7 +59,7 @@
 		</view>
 		
 		<view class="footer flex">
-			<view v-for="(foo, index) in footerList" :key="foo.id" :class="['foo', index == 1 ? 'mr10 ml10' : '']" @click="handelFooter">
+			<view v-for="(foo, index) in footerList" :key="foo.id" :class="['foo', index == 1 ? 'mr10 ml10' : '']" @click="handelFooter(foo.img)">
 				<view class="flex flex-c pt10">
 					<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`../../static/image/${foo.img}.png`)" width="120rpx" height="120rpx"></u--image>
 					<p class='mt10 fons-16'>{{ foo.title }}</p>
@@ -174,11 +174,13 @@
 			},
 			
 			// 点击最下面的三块区域 --> 功能待完善
-			handelFooter () {
+			handelFooter (img) {
+				console.log(img)
+				if(img == 'phone') return this.$msg('敬请期待')
 				this.$load()
 				setTimeout(() => {
 					uni.hideLoading()
-				}, 2000)
+				}, 500)
 			},
 			
 			

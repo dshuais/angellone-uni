@@ -118,9 +118,36 @@
 			{
 			"path": "user/index",
 			"style": {
-				"navigationBarTitleText": "user",
+				"navigationBarTitleText": "个人信息",
 				"enablePullDownRefresh": false
-				// "navigationStyle": "custom"
+				}
+			},
+			{
+			"path": "system/index",
+			"style": {
+				"navigationBarTitleText": "设置",
+				"enablePullDownRefresh": false
+				}
+			},
+			{
+			"path": "opinion/index",
+			"style": {
+				"navigationBarTitleText": "意见反馈",
+				"enablePullDownRefresh": false
+				}
+			},
+			{
+			"path": "costomer/index",
+			"style": {
+				"navigationBarTitleText": "客服",
+				"enablePullDownRefresh": false
+				}
+			},
+			{
+			"path": "about/index",
+			"style": {
+				"navigationBarTitleText": "Angell One",
+				"enablePullDownRefresh": false
 				}
 			}
 		]}

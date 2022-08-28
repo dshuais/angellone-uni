@@ -11,7 +11,7 @@
 		<div class='posi-a start c-fff'>
 			<button class='mt30 flex btn-login' @click="handleLogin">S T A R T</button>
 			<p class='flex mt20 fons-16' @click='logInLater'>log in later</p>
-			<p class='text-c posi-a flex text'>仅用于登录，不会获取您的手机号等敏感信息。</p>
+			<p class='text-c posi-a flex text fons-12'>仅用于登录，不会获取您的手机号等敏感信息。</p>
 		</div>
 	</div>
 </template>

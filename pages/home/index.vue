@@ -4,7 +4,7 @@
 			<u--image :showMenuByLongpress='false' @click="handelClickUserInfo" width='120' height='120' shape='circle'
 			 :src="userInfo.avatar || `https://angellone.dshuais.com/img/avatar/default-avatar%20(${defaultNumber}).png`"></u--image>
 			<view class="ml20">
-				<p class='fons-18'><span>{{ userInfo.nikeName || 'ANGELL ONE' + (Date.now() + '').slice(-4) }}</span>
+				<p class='fons-18'><span>{{ userInfo.nickName || 'ANGELL ONE' + (Date.now() + '').slice(-4) }}</span>
 				<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`@/static/image/${
 					userInfo.gender == 0 ? 'ysnan' : userInfo.gender == 1 ? 'ysnv' : 'ysnone'}.png`)" width="55rpx" height="55rpx" shape='circle'></u--image>
 					</p>
@@ -58,7 +58,8 @@
 					<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`@/static/image/${isUpDown ? 'down' : 'top'}.png`)" width="40rpx" height="40rpx"></u--image>
 				</p>
 				<u-cell-group :border='false'>
-					<u-cell :isLink="true" :rightIconStyle="{'font-size':'26rpx'}" v-for="(cell, index) in cellList" :key="index" @click='handelCell'>
+					<u-cell :isLink="true" :rightIconStyle="{'font-size':'26rpx'}" v-for="(cell, index) in cellList" :key="index"
+					 @click='handelCell(cell.path)'>
 						<view slot="title" class="u-slot-title flex-a">
 							<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`@/static/image/${cell.icon}.png`)" width="40rpx" height="40rpx"></u--image>
 							<text class="u-cell-text ml10">{{ cell.title }}</text>
@@ -73,7 +74,8 @@
 
 <script>
 	import { systemInfo } from '@/mixin/navigation'
-	import { getToken } from '@/utils/cache'
+	import { getToken, getStorage } from '@/utils/cache'
+	import { ANGELLONE_USERINFO } from '@/config/config'
 	export default {
 		name: 'Personal',
 		mixins: [systemInfo],
@@ -82,15 +84,9 @@
 		data() {
 			return{
 				token: getToken(),
-				defaultNumber: void 0, // 默认头像的随机数
-				
+				defaultNumber: 1, // 默认头像的随机数
 				isTouchDisable: false, // 是否禁止滑动
-				userInfo: {
-					avatar: 'https://cdn.uviewui.com/uview/album/1.jpg',
-					nikeName: '杜帅',
-					gender: 0,
-					username: 'dushuai',
-				},
+				userInfo: getStorage(ANGELLONE_USERINFO) || {},
 				gridList: [
 					{ name: 'focus', title: '关注', number: 0 },
 					{ name: 'star', title: 'Star', number: 0 },
@@ -109,11 +105,11 @@
 				curTop: 400, // 上下滑动的状态值 (根据getTouchboxDetail自己取)
 				isUpDown: false,
 				cellList: [
-					{ title: '设置', icon: 'system' },
-					{ title: '个人信息', icon: 'userinfo' },
-					{ title: '意见反馈', icon: 'opinion' },
-					{ title: '联系客服', icon: 'costomer' },
-					{ title: '关于AngellOne', icon: 'about' },
+					{ title: '设置', icon: 'system', path: 'system' },
+					{ title: '个人信息', icon: 'userinfo', path: 'user' },
+					{ title: '意见反馈', icon: 'opinion', path: 'opinion' },
+					{ title: '联系客服', icon: 'costomer', path: 'costomer' },
+					{ title: '关于AngellOne', icon: 'about', path: 'about' },
 				],
 				
 				startData: {
@@ -144,6 +140,7 @@
 			this.defaultNumber = Math.ceil(Math.random() * 24) // 随机头像编号
 
 			this.token = getToken()
+			this.userInfo = getStorage(ANGELLONE_USERINFO) || {}
 			getApp().getNetwork()
 		},
 		methods: {
@@ -160,9 +157,7 @@
 				if(this.token) {
 					console.log('有tokenle');
 				} else {
-					uni.navigateTo({
-						url: '/pages/subUser/login/index'
-					})
+					this.$jump('/pages/subUser/login/index')
 				}
 			},
 			
@@ -178,8 +173,8 @@
 			},
 			
 			// 点击cell列表
-			handelCell () {
-				console.log('点击');
+			handelCell (path) {
+				this.$jump(`/pages/subUser/${path}/index`)
 			},
 			
 			

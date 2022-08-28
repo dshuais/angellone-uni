@@ -1,4 +1,5 @@
-const TOKENKEY = 'angellone-token'
+// const TOKENKEY = 'angellone-token'
+import { TOKENKEY } from '@/config/config'
 
 export const setStorage = (key, value) => {
 	if(!uni.setStorageSync) return
