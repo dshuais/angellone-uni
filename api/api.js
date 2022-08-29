@@ -29,6 +29,10 @@ export const getTokenStatus = data => request.get('user/status', data, {isModal:
 
 export const resetPwd = data => request.patch('user/changePwd', data) // 修改密码
 
+export const updateUserInfo = data => request.put('user/update', data) // 修改用户信息
+
+export const getUserInfo = _ => request.get('user/info') // 获取用户信息
+
 
 /**
  *  图片池相关

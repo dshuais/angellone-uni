@@ -28,6 +28,7 @@
 				<u-button :hairline='false' type="primary" text="修改" color='#4242E1' :loading='btnLoad' :customStyle="{
 					width: '534rpx', height: '80rpx'
 				}" shape='circle' @click='handleSetPwd'></u-button>
+				<text class="fons-10 c-999 mt5 text-c block">改密码为AngellOne后台登录密码，并不是小程序密码</text>
 			</view>
 			
 		</view>
@@ -66,8 +67,8 @@
 		methods: {
 			// 点击操作
 			handleClickOperate(type) {
+				if(!getToken()) return this.$msg('您还未登录')
 				if(type == 'logout') {
-					if(!getToken()) return this.$msg('您还未登录')
 					uni.showModal({
 						title: '退出提示',
 						content: '退出将清除您的个人信息，是否确认继续',

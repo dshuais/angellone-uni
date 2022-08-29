@@ -3,7 +3,7 @@
 	
 	/** 回填的省市联动的打开默认索引切换
 		 const star = this.columns3[0].indexOf(this.province) // 省份数据
-		 picker.setColumnValues(1, this.columnData[star])
+		 this.$refs.cityPicker.setColumnValues(1, this.columnData[star])
 		 const end = this.columnData[star].indexOf(this.city)
 		 this.$nextTick(() => {
 			this.defaultIndex = [star, end]
