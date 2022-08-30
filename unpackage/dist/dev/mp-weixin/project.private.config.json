@@ -51,8 +51,32 @@
                     "query": "",
                     "launchMode": "default",
                     "scene": null
+                },
+                {
+                    "name": "意见反馈",
+                    "pathName": "pages/subUser/opinion/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "客服",
+                    "pathName": "pages/subUser/customer/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "关于我们",
+                    "pathName": "pages/subUser/about/index",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
                 }
             ]
         }
+    },
+    "setting": {
+        "urlCheck": false
     }
 }

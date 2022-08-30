@@ -108,7 +108,7 @@
 					{ title: '设置', icon: 'system', path: 'system' },
 					{ title: '个人信息', icon: 'userinfo', path: 'user' },
 					{ title: '意见反馈', icon: 'opinion', path: 'opinion' },
-					{ title: '联系客服', icon: 'costomer', path: 'costomer' },
+					{ title: '联系客服', icon: 'customer', path: 'customer' },
 					{ title: '关于AngellOne', icon: 'about', path: 'about' },
 				],
 				

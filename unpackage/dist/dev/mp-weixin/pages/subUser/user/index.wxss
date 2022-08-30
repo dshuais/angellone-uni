@@ -30,7 +30,7 @@
 .data-v-429da1aa.container .main .info {
   width: 100%;
   margin-top: 80rpx;
-  box-shadow: 0 12rpx 20rpx 2rpx rgba(40, 87, 63, 0.16);
+  box-shadow: 0 8rpx 16rpx 2rpx rgba(0, 0, 0, 0.12);
 }
 .data-v-429da1aa.container .main .info .avatar {
   left: 50%;

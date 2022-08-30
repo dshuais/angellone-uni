@@ -137,7 +137,7 @@
 				}
 			},
 			{
-			"path": "costomer/index",
+			"path": "customer/index",
 			"style": {
 				"navigationBarTitleText": "客服",
 				"enablePullDownRefresh": false

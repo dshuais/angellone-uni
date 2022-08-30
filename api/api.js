@@ -46,3 +46,9 @@ export const getTodayGuide = id => request.get(`selected/guide/${id}`) // 查询
 export const getNewestSwiper = _ => request.get('selected/swiper') // 查询最新的轮播图
 
 export const getStarMaxUser = _ => request.get('selected/staruser') // 查询当前star最高的用户信息
+
+
+/**
+ *  意见反馈相关
+ */
+export const submitFeedback = data => request.post('feedback/add', data) // 添加反馈意见
