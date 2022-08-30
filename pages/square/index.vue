@@ -120,6 +120,7 @@
 				  this.isPopupShow = true
 			  } else {
 				this.queryParams.pageNum = 1
+				this.history = []
 				this.dataInit(true)
 				return this.$refs.uNotify.show({
 					message: '刷新成功',
