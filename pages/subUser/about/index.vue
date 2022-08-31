@@ -31,7 +31,7 @@
 			this.bg2 = this.randomColor(0, 255)
 		},
 		methods: {
-			
+			// 从新生成颜色
 			getBackground() {
 				this.bg1 = this.randomColor(0, 255)
 				this.bg2 = this.randomColor(0, 255)
@@ -40,12 +40,14 @@
 				// })
 			},
 			
+			// 生成rgba颜色
 			randomColor(min, max) {
 			  const r = this.randomNum(min, max)
 			  const g = this.randomNum(min, max)
 			  const b = this.randomNum(min, max)
 			  return `rgba(${r},${g},${b},${Math.random()})`
 			},
+			// 随机生成数字
 			randomNum(min, max) {
 			  const num = Math.floor(Math.random() * (max - min) + min)
 			  return num
