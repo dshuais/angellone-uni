@@ -37,7 +37,7 @@ export const getUserInfo = _ => request.get('user/info') // 获取用户信息
 /**
  *  图片池相关
  */
-export const getSquareList = data => request.post('selected/list', data) // 查询图片列表
+export const getSquareList = data => request.post('selected/list', data) // 查询精选池图片列表
 
 export const getTodaySelected = () => request.get('selected') // 查询每日精选图片
 
@@ -46,6 +46,10 @@ export const getTodayGuide = id => request.get(`selected/guide/${id}`) // 查询
 export const getNewestSwiper = _ => request.get('selected/swiper') // 查询最新的轮播图
 
 export const getStarMaxUser = _ => request.get('selected/staruser') // 查询当前star最高的用户信息
+
+export const getPictureList = params => request.get('sea/privatePicture', params) // 查询个人素材池
+
+export const getFilesList = params => request.get('sea/files', params) // 查询文件列表
 
 
 /**

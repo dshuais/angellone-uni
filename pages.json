@@ -97,6 +97,13 @@
 				}
 			},
 			{
+			"path": "squareList/index",
+			"style": {
+				"navigationBarTitleText": "每日精选~",
+				"enablePullDownRefresh": false
+				}
+			},
+			{
 			    "path" : "files/index",
 			    "style": {
 			        "navigationBarTitleText": "文件池",

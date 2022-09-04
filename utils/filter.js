@@ -80,3 +80,16 @@ Vue.filter('hidePhoneNumber', (phoneNumber) => {
 	const tel = phoneNumber + '', start = tel.substr(0,3), end = tel.substr(-4)
 	return start + '****' + end
 })
+
+
+/**
+ * 计算文件大小
+ * @param size 要计算的大小number值 返回大小类型 b kb mb（默认保留两位）
+ */
+Vue.filter('bytesToSize', (size) => {
+	const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB']
+	if (size <= 0) return '0Byte'
+	const i = parseInt(Math.floor(Math.log(size) / Math.log(1024)))
+	// return Math.round(size / Math.pow(1024, i), 2) + ' ' + sizes[i]
+	return (size / Math.pow(1024, i)).toFixed(2) + sizes[i]
+})

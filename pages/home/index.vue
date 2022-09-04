@@ -128,7 +128,7 @@
 			} else if([6,7,8].includes(month)) {
 				this.fourSeasons.statement = '去吹吹夏日晚风，也许会遇见浪漫'
 				this.fourSeasons.picture = 'http://ds.dshuais.com/425708edd0ca6e4610de25b21.jpg'
-			} else if([6,7,8].includes(month)) {
+			} else if([9,10,11].includes(month)) {
 				this.fourSeasons.statement = '秋天短到没有，你我短到不能回头'
 				this.fourSeasons.picture = 'http://ds.dshuais.com/425708edd0ca6e4610de25b22.jpg'
 			} else {

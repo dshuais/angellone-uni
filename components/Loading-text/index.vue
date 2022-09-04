@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view class="loadin-text">
 		<view class="h-30 flex mt10 fons-12">
 			<u-loading-icon text="加载中" size="24" textSize="24" v-if="status == 2"></u-loading-icon>
 			<text v-if="status == 3"> 没有更多了~~ </text>
@@ -33,6 +33,8 @@
 	}
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+ .loadin-text {
+	 padding-bottom: 86rpx;
+ }
 </style>

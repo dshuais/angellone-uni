@@ -112,13 +112,14 @@
 			},
 			
 			async decide(choice) {
+				console.log(choice);
 			  if (choice === "rewind") {
 				if (this.history.length) {
 				  this.$refs.tinder.rewind([this.history.pop()]);
 				}
 			  } else if (choice === "help") {
 				  this.isPopupShow = true
-			  } else {
+			  } else if(choice === 'super') {
 				this.queryParams.pageNum = 1
 				this.history = []
 				this.dataInit(true)
@@ -132,10 +133,13 @@
 					safeAreaInsetTop: true
 				})
 				// return this.$msg('敬请期待')
-				this.$refs.tinder.decide(choice);
+				this.$refs.tinder.decide(choice) // 正常的操作 现在不会执行
+			  } else {
+				  this.$jump('/pages/subSquare/squareList/index')
 			  }
 			},
 			
+			// 切换查看模式
 			changeRadio(val) {
 				// console.log(val)
 				this.queryParams.pageNum = 1
@@ -148,6 +152,7 @@
 				this.isPopupShow = false
 			},
 			
+			// 选择不同的标签 暂时没有
 			handelTag(val) {
 				this.isTagShow = false
 				this.close()

@@ -70,7 +70,6 @@ Vue.prototype.$jump = function(path, flag = 1) {
 		})
 	}
 }
-
 // 全局挂载过滤器
 Object.keys(filters).forEach(key => {
 	Vue.filter(key, filters[key])

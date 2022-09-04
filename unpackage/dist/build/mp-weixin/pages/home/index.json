@@ -1,0 +1,13 @@
+{
+  "enablePullDownRefresh": false,
+  "navigationBarTitleText": "个人中心",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "u--image": "/node-modules/uview-ui/components/u--image/u--image",
+    "u-grid": "/node-modules/uview-ui/components/u-grid/u-grid",
+    "u-grid-item": "/node-modules/uview-ui/components/u-grid-item/u-grid-item",
+    "you-touchbox": "/uni_modules/you-touchbox/components/you-touchbox/you-touchbox",
+    "u-cell-group": "/node-modules/uview-ui/components/u-cell-group/u-cell-group",
+    "u-cell": "/node-modules/uview-ui/components/u-cell/u-cell"
+  }
+}

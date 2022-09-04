@@ -10,8 +10,8 @@ module.exports = {
 	//H5接口是浏览器地址
 	HTTP_REQUEST_URL: window.location.protocol + "//" + window.location.host,
 	// #endif
-	HTTP_REQUEST_URL: "http://127.0.0.1:9529/api/", // 本地
-	// HTTP_REQUEST_URL: "https://angellone.dshuais.com/api/", // 线上
+	// HTTP_REQUEST_URL: "http://127.0.0.1:9529/api/", // 本地
+	HTTP_REQUEST_URL: "https://angellone.dshuais.com/api/", // 线上
 	HEADER: {
 		// 'content-type': 'application/json'
 		'content-type': 'application/x-www-form-urlencoded',

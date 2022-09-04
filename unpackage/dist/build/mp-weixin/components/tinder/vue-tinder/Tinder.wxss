@@ -1,0 +1,7 @@
+.vue-tinder.data-v-04e62979{position:relative;-webkit-tap-highlight-color:transparent}.v-move.data-v-04e62979{transition:none!important}.pointer-wrap.data-v-04e62979{pointer-events:none;transition:opacity .2s ease}.tinder-card.nope .nope-pointer-wrap.data-v-04e62979,
+.tinder-card.like .like-pointer-wrap.data-v-04e62979,
+.tinder-card.super .super-pointer-wrap.data-v-04e62979,
+.tinder-card.down .down-pointer-wrap.data-v-04e62979{opacity:1!important}.tinder-card.nope .rewind-pointer-wrap.data-v-04e62979,
+.tinder-card.like .rewind-pointer-wrap.data-v-04e62979,
+.tinder-card.super .rewind-pointer-wrap.data-v-04e62979,
+.tinder-card.down .rewind-pointer-wrap.data-v-04e62979{display:none}
