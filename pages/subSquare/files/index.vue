@@ -160,7 +160,8 @@
 				border-radius: 32rpx;
 				.u-subsection__bar {
 					height: 56rpx;
-					    border-radius: 28rpx !important;
+					border-radius: 28rpx !important;
+					border: 2rpx solid #e8e8e8;
 				}
 			}
 		}
