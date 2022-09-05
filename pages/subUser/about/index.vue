@@ -2,12 +2,11 @@
 	<view class="container">
 		<view class="fons-12 ml10 mb10">socialist core values</view>
 		<view class="main">
-			<view class="list bor-r8" :style="
+			<view class="list bor-r8 flex-w-between" :style="
 				'background: linear-gradient(136deg, ' + bg1 + ' 0%, ' + bg2 + ' 100%);'">
 				<view class="values" @click="getBackground" v-for="(i, index) in list" :key="index"
 				 :style="{
-					background: 'linear-gradient(136deg, ' + bg1 + ' 0%, ' + bg2 + ' 100%);',
-					marginRight: (index+1)%4==0?'0':'21rpx'
+					background: 'linear-gradient(136deg, ' + bg1 + ' 0%, ' + bg2 + ' 100%);'
 				}">
 					{{ i }}
 				</view>
