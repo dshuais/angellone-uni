@@ -8,6 +8,7 @@
     "u-icon": "/node-modules/uview-ui/components/u-icon/u-icon",
     "u-empty": "/node-modules/uview-ui/components/u-empty/u-empty",
     "loading": "/components/mix-loading/index",
-    "loading-text": "/components/Loading-text/index"
+    "loading-text": "/components/Loading-text/index",
+    "popup": "/components/Popup/index"
   }
 }

@@ -18,7 +18,7 @@
 			</view>
 			
 			<view class="file-list">
-				<view class="file flex-between" @click="handleSeeFile(item)"
+				<view class="file flex-between" @click="handleSeeFile(item, index)"
 				 v-for="(item,index) in list" :key="item.id">
 					<view class="flex-a">
 						<u--image :showMenuByLongpress='false' :showLoading="true" width="60rpx" height="70rpx" radius='8rpx'
@@ -41,17 +41,20 @@
 			
 			<loading-text :status="status" v-if="list.length"></loading-text>
 		</scroll-view>
+		
+		<Popup :show.sync="popupShow" :mode="popupMode" :file="curFile" />
 	</view>
 </template>
 
 <script>
 	import loading from '@/components/mix-loading/index'
 	import loadingText from '@/components/Loading-text/index'
+	import Popup from '@/components/Popup/index'
 	import { getToken } from '@/utils/cache'
 	import { getFilesList } from '@/api/api'
 	export default {
 		components: {
-			loading, loadingText
+			loading, loadingText, Popup
 		},
 		data() {
 			return {
@@ -67,6 +70,10 @@
 				list: [],
 				subList: ['公共文件', '私密文件'],
 				currentSub: 0, // 当前所在的分断器的index
+				
+				popupShow: false,
+				popupMode: 'bottom',
+				curFile: {}, // 当前选中的文件信息
 			}
 		},
 		onLoad() {
@@ -82,7 +89,7 @@
 				 // ['ai','pdf','ppt','txt','word','xlsx','zip','png'].includes(item.downUrl.split('.').at(-1)) ? item.downUrl.split('.').at(-1) : 'files'
 				data.forEach(d => {
 					const type = d.downUrl.split('.').at(-1),
-						types = ['ai','pdf','ppt','txt','docx','xlsx','zip','png']
+						types = ['ai', 'pdf', 'ppt', 'txt', 'docx', 'xlsx', 'zip', 'png']
 					if(types.includes(type)) d.typeName = type
 					else {
 						switch(type) {
@@ -138,8 +145,12 @@
 			},
 			
 			// 点击文件
-			handleSeeFile(item) {
-				console.log(item)
+			handleSeeFile(item, ind) {
+				// console.log(item)
+				this.curFile = item
+				if(ind & 1) this.popupMode = 'top'
+					else this.popupMode = 'bottom'
+				this.popupShow = true
 			},
 		}
 	}

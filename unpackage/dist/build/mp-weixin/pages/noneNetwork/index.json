@@ -1,8 +1,0 @@
-{
-  "enablePullDownRefresh": false,
-  "navigationBarTitleText": "断网啦...",
-  "usingComponents": {
-    "u--image": "/node-modules/uview-ui/components/u--image/u--image",
-    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
-  }
-}

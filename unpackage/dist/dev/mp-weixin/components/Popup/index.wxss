@@ -24,30 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.data-v-4fa72e02.container {
-  overflow-y: hidden;
-  background-color: #fcfcfc;
+.data-v-bdeb3fb8.popup .content {
+  height: 420rpx;
 }
-.data-v-4fa72e02.container .top {
-  background-color: #fff;
-  padding: 0 32rpx;
-  height: 100rpx;
-}
-.data-v-4fa72e02.container .top .u-subsection {
-  height: 64rpx;
-  line-height: 64rpx;
-  padding: 4rpx;
-  border-radius: 32rpx;
-}
-.data-v-4fa72e02.container .top .u-subsection .u-subsection__bar {
-  height: 56rpx;
-  border-radius: 28rpx !important;
-  border: 2rpx solid #e8e8e8;
-}
-.data-v-4fa72e02.container .file-list {
-  padding: 0 32rpx;
-}
-.data-v-4fa72e02.container .file-list .file {
-  padding: 16rpx 0;
+.data-v-bdeb3fb8.popup .content .file-info {
+  width: 60%;
 }
 

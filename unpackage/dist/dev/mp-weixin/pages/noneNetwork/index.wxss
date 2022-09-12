@@ -24,7 +24,10 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.container .main.data-v-4870b9b0 {
+.container.data-v-4870b9b0 {
+  background: #fff;
+}
+.container .main2.data-v-4870b9b0 {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin: 20% 0 0 50%;

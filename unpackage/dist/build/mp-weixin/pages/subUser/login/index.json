@@ -1,8 +1,0 @@
-{
-  "enablePullDownRefresh": false,
-  "navigationBarTitleText": "登陆",
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "u--image": "/node-modules/uview-ui/components/u--image/u--image"
-  }
-}

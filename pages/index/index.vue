@@ -59,7 +59,7 @@
 		</view>
 		
 		<view class="footer flex">
-			<view v-for="(foo, index) in footerList" :key="foo.id" :class="['foo', index == 1 ? 'mr10 ml10' : '']" @click="handelFooter(foo.img)">
+			<view v-for="(foo, index) in footerList" :key="foo.id" :class="['foo', index == 1 ? 'mr10 ml10' : '']" @click="handelFooter(foo)">
 				<view class="flex flex-c pt10">
 					<u--image :showMenuByLongpress='false' :showLoading="true" :src="require(`../../static/image/${foo.img}.png`)" width="120rpx" height="120rpx"></u--image>
 					<p class='mt10 fons-16'>{{ foo.title }}</p>
@@ -94,9 +94,9 @@
 				isTopShow: void 0,
 				goodsMsg: '您好', // 按时间段播报
 				footerList: [
-					{ id: 1, img: 'phone', title: '绑定手机号', text: '为了您的账号信息安全与完整' },
-					{ id: 2, img: 'tea2', title: '一键三连', text: '您的支持，是我们最大的动力' },
-					{ id: 3, img: 'email2', title: '联系我们', text: '有什么建议和问题，请找到我们' },
+					{ id: 1, img: 'phone', title: '绑定手机号', text: '为了您的账号信息安全与完整', path: '' },
+					{ id: 2, img: 'tea2', title: '一键三连', text: '您的支持，是我们最大的动力', path: '' },
+					{ id: 3, img: 'email2', title: '联系我们', text: '有什么建议和问题，请找到我们', path: '/pages/subUser/customer/index' },
 				],
 				isCall: false,
 				// starUserInfo: getStorage('angellone-userinfo'),
@@ -174,9 +174,10 @@
 			},
 			
 			// 点击最下面的三块区域 --> 功能待完善
-			handelFooter (img) {
-				console.log(img)
-				if(img == 'phone') return this.$msg('敬请期待')
+			handelFooter ({ img, path }) {
+				if(!path) return this.$msg('敬请期待')
+				this.$jump(path)
+				return
 				this.$load()
 				setTimeout(() => {
 					uni.hideLoading()

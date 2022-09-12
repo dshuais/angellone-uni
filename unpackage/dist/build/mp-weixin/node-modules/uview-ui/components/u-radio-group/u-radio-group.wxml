@@ -1,1 +1,0 @@
-<view class="{{['u-radio-group','data-v-4b00254e',bemClass]}}"><slot></slot></view>

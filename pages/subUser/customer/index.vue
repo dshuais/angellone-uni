@@ -24,7 +24,7 @@
 			return{
 				phoneList: [
 					{ phone: '15926689137', name: '杜帅' },
-					{ phone: '18271901824', name: '秦帅' }
+					// { phone: '18271901824', name: '秦帅' }
 				]
 			}
 		},
