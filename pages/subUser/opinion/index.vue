@@ -14,10 +14,12 @@
 					<u--textarea placeholder="如有侵权或开发建议,可在这里反馈给我!" v-model="feedback.content" count
 						height='160rpx' maxlength="500"></u--textarea>
 				</u-form-item>
-				<u-form-item :label="input.name" :prop="input.data" v-for="(input, index) in inputList" :key="index">
-					<u--input v-model="feedback[input.data]" border="none" :placeholder="`留下您的${input.name}`"></u--input>
-				</u-form-item>
-				<text class="c-999 fons-12 mt10 mb10 block">留下您的任意一种联系方式，好让我可以找到你鸭</text>
+				<view v-if="false">
+					<u-form-item :label="input.name" :prop="input.data" v-for="(input, index) in inputList" :key="index">
+						<u--input v-model="feedback[input.data]" border="none" :placeholder="`留下您的${input.name}`"></u--input>
+					</u-form-item>
+					<text class="c-999 fons-12 mt10 mb10 block">留下您的任意一种联系方式，好让我可以找到你鸭</text>
+				</view>
 			</u--form>
 		</view>
 		
@@ -38,7 +40,7 @@
 					phone: void 0,
 					email: void 0,
 					wechat: void 0,
-					qq: void 0
+					qq: '1137896420'
 				},
 				rulesFeedback: {
 					content: [
@@ -84,13 +86,14 @@
 				}).catch(err=>{ })
 			},
 			
+			// 重置feedback数据
 			reset() {
 				this.feedback = {
 					content: '',
 					phone: void 0,
 					email: void 0,
 					wechat: void 0,
-					qq: void 0
+					qq: '1137896420'
 				}
 			}
 		},
