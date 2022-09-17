@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "引导页",
-  "enablePullDownRefresh": false,
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "u--image": "/node-modules/uview-ui/components/u--image/u--image"
-  }
-}

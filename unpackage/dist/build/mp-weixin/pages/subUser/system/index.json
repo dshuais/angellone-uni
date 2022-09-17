@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "设置",
-  "enablePullDownRefresh": false,
-  "usingComponents": {
-    "u--image": "/node-modules/uview-ui/components/u--image/u--image",
-    "u--input": "/node-modules/uview-ui/components/u--input/u--input",
-    "u-button": "/node-modules/uview-ui/components/u-button/u-button"
-  }
-}
